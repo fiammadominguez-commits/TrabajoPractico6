@@ -208,7 +208,7 @@ public class GestionDeProductos extends javax.swing.JFrame {
         txtNombre.setText("");
         txtPrecio.setText("");
         
-       //borrarFilas();
+       
         llenarTabla(nuevo);
         
     }//GEN-LAST:event_btnAgregarActionPerformed
@@ -287,32 +287,13 @@ public class GestionDeProductos extends javax.swing.JFrame {
        
        tablaProductos.setModel(modelo);
    }
-   private void llenarTabla(Producto aux){
-       
-       
-      // Categorias categoria = (Categorias) cBCategoria.getSelectedItem();
-       
+   private void llenarTabla(Producto aux){  
       modelo.addRow(new Object []{ aux.getNombre(),aux.getCategoria(),aux.getPrecio()});
         }
-       /* for (Producto produ : productos) {
-           //if (produ!=null){
-              modelo.addRow(new Object []{
-              produ.getNombre(),
-              produ.getCategoria(),
-              produ.getPrecio()
-              });
-           //}
-       }*/
+       
         
         
 
-    private void borrarFilas(){
-     int numFilas= modelo.getRowCount() -1;
-     for (int i = numFilas; i >= 0; i--) {
-         modelo.removeRow( i );
-         
-     }
-    }
 
 
 }
