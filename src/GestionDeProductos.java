@@ -24,6 +24,7 @@ public class GestionDeProductos extends javax.swing.JFrame {
     public GestionDeProductos() {
         initComponents();
         modelo= new DefaultTableModel();
+        armarCabecera();
         productos= new ArrayList();
         llenarCombo();
        
@@ -287,14 +288,14 @@ public class GestionDeProductos extends javax.swing.JFrame {
    }
    private void llenarTabla(){
         for (Producto produ : productos) {
-           if (produ!=null){
+           //if (produ!=null){
               modelo.addRow(new Object []{
               produ.getNombre().trim(),
               produ.getCategoria(),
               produ.getPrecio()
               
               });
-           }  
+           //}  
        }
         
    }
